@@ -31,7 +31,7 @@ Add in one line:
 
 If you are running on your localhost:3000, exit and restart.
 
-== Convert Checkboxes to Buttons
+== Format Your Submit Button
 
 To add a button to a tag in your app, all you need to do is add the class 'btn'
 to your tag. If you'd like to change the color, you can add another class, like
@@ -43,32 +43,41 @@ Here is an example of formatting our 'Submit' as a blue button with form_for:
   <%= form_for(@puppy) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-		<%= f.label :breed %>
+    <%= f.label :breed %>
     <%= f.text_field :breed %>
-		<%= f.label :playtime %>
-    <%= f.text_field :playtime %>
-		<%= f.submit 'Submit', :class => 'btn btn-primary' %>
+    <%= f.label :playtime %>
+    <%= f.check_box :playtime %>
+    <%= f.submit 'Submit', :class => 'btn btn-primary' %>
   <% end %>
 
 Note: Before you add a class to your submit button with form_for, you must
 add a label.
 
-== Something else
+== Convert Your Checkbox to a Button
 
-The result will be a message in your log file along the lines of:
+Have you ever noticed that clicking the checkbox label on a form checks the 
+checkbox for you? This piece of information is enough to get us started. 
 
-  Mon Oct 08 14:22:29 +1000 2007 Destroyed Weblog ID #1!
+First, hide your checkbox by adding a style selector to your checkbox.
+  
+  ..
+    <%= f.label :playtime %>
+    <%= f.check_box :playtime, :style => 'visibility: hidden' %>
+  ..
 
-More information on how to use the logger is at http://www.ruby-doc.org/core/
+Next, add a button class to your label.
 
-Also, Ruby documentation can be found at http://www.ruby-lang.org/. There are
-several books available online as well:
+..
+  <%= f.label :playtime, :class => 'btn' %>
+  <%= f.check_box :playtime, :style => 'visibility: hidden' %>
+..
 
-* Programming Ruby: http://www.ruby-doc.org/docs/ProgrammingRuby/ (Pickaxe)
-* Learn to Program: http://pine.fm/LearnToProgram/ (a beginners guide)
+That's it! You've gotten rid of an ugly checkbox. The only problem is 
+with this format, a user doesn't know if the checkbox (or now - button)
+has been selected or not. To fix this, we need to add some jQuery.
 
-These two books will bring you up to speed on the Ruby language and also on
-programming in general.
+== Add Toggle Functionality to your New Button
+
 
 
 == Debugger
