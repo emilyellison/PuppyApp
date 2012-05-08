@@ -38,7 +38,7 @@ to your tag. If you'd like to change the color, you can add another class, like
 'btn-primary'. For a full list of choices, visit:
 link:http://twitter.github.com/bootstrap/base-css.html#buttons
 
-Here is an example of formatting our 'Submit' as a blue button with form_for:
+Here is an example of formatting 'Submit' as a blue button with form_for:
 
   <%= form_for(@puppy) do |f| %>
     <%= f.label :name %>
@@ -72,9 +72,10 @@ Next, add a button class to your label.
     <%= f.check_box :playtime, :style => 'visibility: hidden' %>
   ..
 
-So now, you've gotten rid of an ugly checkbox. The only problem is 
-with this format, a user doesn't know if the checkbox (or now - button)
-has been selected or not. To fix this, we need to add some jQuery.
+So now, you've gotten rid of an ugly checkbox. The only problem 
+with this format is a user doesn't know if the checkbox (or now - button)
+has been selected or not. To fix this, we need to add some jQuery to
+create toggle functionality.
 
 == Add Toggle Functionality to your New Button
 
@@ -102,4 +103,4 @@ added, so the label will have the class: 'btn btn-primary'.
   });
 
 And that's it. Your form has replaced an ugly checkbox with a pretty
-toggle button.
+toggle button!
