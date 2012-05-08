@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PuppyApp</title>
+  <title>Puppy Care</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class='navbar'>
+		<div class='navbar-inner'>
+			<div class='container'>
+				<ul class='nav pull-left'>
+					<li><%= link_to 'Puppy Care', puppies_url, :class => 'brand' %></li>
+				</ul>
+				<ul class='nav pull-right'>
+					<li><%= link_to 'Enroll', new_puppy_url %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='container'>
+		<%= yield %>
+	</div>
 </body>
 </html>

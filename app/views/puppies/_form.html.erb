@@ -11,23 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :breed %><br />
+    <%= f.label :breed %>
     <%= f.text_field :breed %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :playtime %><br />
+    <%= f.label :playtime %>
     <%= f.check_box :playtime %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+		<br/>
+    <%= f.submit 'Submit', :class => 'btn btn-primary' %> 
+
 <% end %>
+
+<%= link_to 'Back', puppies_path %>

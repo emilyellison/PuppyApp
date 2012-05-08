@@ -1,7 +1,11 @@
-== Add Some Fast Design with Twitter Bootstrap
+== Convert Checkboxes to Buttons with Twitter Bootstrap!
 
 Twitter Bootstrap is a great way to add some design to your website quickly,
 especially if you are just focused on getting an MVP out as soon as possible.
+
+The main way that Twitter Bootstrap functions is by adding CSS to classes. You can 
+add style to your app by adding Twitter Bootstrap's classes to your tags.
+
 You can read more about Twitter Bootstrap at
 link:http://twitter.github.com/bootstrap/.
 
@@ -18,33 +22,38 @@ link:https://github.com/thomas-mcdonald/bootstrap-sass
 
 Don't forget to bundle install!
 
-Create a new stylesheet in app/assets/stylesheets called 'custom.css.scss'. 
+Create a new stylesheet in app/assets/stylesheets called 'puppies.css.scss'. 
 (You can name it anything you want.)
 
 Add in one line:
 
   @import 'bootstrap';
 
-== Debugging Rails
+If you are running on your localhost:3000, exit and restart.
 
-Sometimes your application goes wrong. Fortunately there are a lot of tools that
-will help you debug it and get it back on the rails.
+== Convert Checkboxes to Buttons
 
-First area to check is the application log files. Have "tail -f" commands
-running on the server.log and development.log. Rails will automatically display
-debugging and runtime information to these files. Debugging info will also be
-shown in the browser on requests from 127.0.0.1.
+To add a button to a tag in your app, all you need to do is add the class 'btn'
+to your tag. If you'd like to change the color, you can add another class, like
+'btn-primary'. For a full list of choices, visit:
+link:http://twitter.github.com/bootstrap/base-css.html#buttons
 
-You can also log your own messages directly into the log file from your code
-using the Ruby logger class from inside your controllers. Example:
+Here is an example of formatting our 'Submit' as a blue button with form_for:
 
-  class WeblogController < ActionController::Base
-    def destroy
-      @weblog = Weblog.find(params[:id])
-      @weblog.destroy
-      logger.info("#{Time.now} Destroyed Weblog ID ##{@weblog.id}!")
-    end
-  end
+  <%= form_for(@puppy) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+		<%= f.label :breed %>
+    <%= f.text_field :breed %>
+		<%= f.label :playtime %>
+    <%= f.text_field :playtime %>
+		<%= f.submit 'Submit', :class => 'btn btn-primary' %>
+  <% end %>
+
+Note: Before you add a class to your submit button with form_for, you must
+add a label.
+
+== Something else
 
 The result will be a message in your log file along the lines of:
 
