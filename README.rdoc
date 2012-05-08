@@ -6,6 +6,9 @@ especially if you are just focused on getting an MVP out as soon as possible.
 The main way that Twitter Bootstrap functions is by adding CSS to classes. You can 
 add style to your app by adding Twitter Bootstrap's classes to your tags.
 
+In this app, we're going to convert a checkbox to a button. To see a demo, visit:
+link:http://electric-samurai-7475.herokuapp.com/puppies/new
+
 You can read more about Twitter Bootstrap at
 link:http://twitter.github.com/bootstrap/.
 
