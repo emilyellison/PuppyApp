@@ -1,0 +1,29 @@
+<h1>Listing puppies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Age</th>
+    <th>Playtime</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @puppies.each do |puppy| %>
+  <tr>
+    <td><%= puppy.name %></td>
+    <td><%= puppy.breed %></td>
+    <td><%= puppy.age %></td>
+    <td><%= puppy.playtime %></td>
+    <td><%= link_to 'Show', puppy %></td>
+    <td><%= link_to 'Edit', edit_puppy_path(puppy) %></td>
+    <td><%= link_to 'Destroy', puppy, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Puppy', new_puppy_path %>

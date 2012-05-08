@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  breed: MyString
+  age: 1
+  playtime: false
+
+two:
+  name: MyString
+  breed: MyString
+  age: 1
+  playtime: false
