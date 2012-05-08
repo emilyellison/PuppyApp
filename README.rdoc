@@ -9,7 +9,6 @@ link:http://twitter.github.com/bootstrap/.
 
 Start by adding Bootstrap-Sass to your Gemfile:
 
-  gem 'sass-rails', '~> 3.1'
 	gem 'bootstrap-sass', '~> 2.0.2'
 
 Bootstrap-Sass is a Sass-friendly version of Twitter Bootstrap. Great
