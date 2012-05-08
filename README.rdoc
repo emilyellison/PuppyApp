@@ -1,48 +1,23 @@
-== Welcome to Rails
+== Add Some Fast Design with Twitter Bootstrap
 
-Rails is a web-application framework that includes everything needed to create
-database-backed web applications according to the Model-View-Control pattern.
-
-This pattern splits the view (also called the presentation) into "dumb"
-templates that are primarily responsible for inserting pre-built data in between
-HTML tags. The model contains the "smart" domain objects (such as Account,
-Product, Person, Post) that holds all the business logic and knows how to
-persist themselves to a database. The controller handles the incoming requests
-(such as Save New Account, Update Product, Show Post) by manipulating the model
-and directing data to the view.
-
-In Rails, the model is handled by what's called an object-relational mapping
-layer entitled Active Record. This layer allows you to present the data from
-database rows as objects and embellish these data objects with business logic
-methods. You can read more about Active Record in
-link:files/vendor/rails/activerecord/README.html.
-
-The controller and view are handled by the Action Pack, which handles both
-layers by its two parts: Action View and Action Controller. These two layers
-are bundled in a single package due to their heavy interdependence. This is
-unlike the relationship between the Active Record and Action Pack that is much
-more separate. Each of these packages can be used independently outside of
-Rails. You can read more about Action Pack in
-link:files/vendor/rails/actionpack/README.html.
-
+Twitter Bootstrap is a great way to add some design to your website quickly,
+especially if you are just focused on getting an MVP out as soon as possible.
+You can read more about Twitter Bootstrap at
+link:http://twitter.github.com/bootstrap/.
 
 == Getting Started
 
-1. At the command prompt, create a new Rails application:
-       <tt>rails new myapp</tt> (where <tt>myapp</tt> is the application name)
+Start by adding Bootstrap-Sass to your Gemfile:
 
-2. Change directory to <tt>myapp</tt> and start the web server:
-       <tt>cd myapp; rails server</tt> (run with --help for options)
+  gem 'sass-rails', '~> 3.1'
+	gem 'bootstrap-sass', '~> 2.0.2'
 
-3. Go to http://localhost:3000/ and you'll see:
-       "Welcome aboard: You're riding Ruby on Rails!"
+Bootstrap-Sass is a Sass-friendly version of Twitter Bootstrap. Great
+if you want to add mix-in's and custom variables. To read more about
+Bootstrap-Sass, visit:
+link:https://github.com/thomas-mcdonald/bootstrap-sass
 
-4. Follow the guidelines to start developing your application. You can find
-the following resources handy:
-
-* The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
-* Ruby on Rails Tutorial Book: http://www.railstutorial.org/
-
+Don't forget to bundle install!
 
 == Debugging Rails
 
