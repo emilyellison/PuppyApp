@@ -11,13 +11,12 @@
 </p>
 
 <p>
-  <b>Age:</b>
-  <%= @puppy.age %>
-</p>
-
-<p>
   <b>Playtime:</b>
-  <%= @puppy.playtime %>
+  <% if @puppy.playtime == true %>
+		Yes
+	<% else %>
+		No
+	<% end %>
 </p>
 
 

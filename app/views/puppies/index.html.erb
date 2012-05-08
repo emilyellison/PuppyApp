@@ -1,10 +1,9 @@
-<h1>Listing puppies</h1>
-
-<table>
+<h1>Enrolled Puppies</h1>
+<br/>
+<table class='table'>
   <tr>
     <th>Name</th>
     <th>Breed</th>
-    <th>Age</th>
     <th>Playtime</th>
     <th></th>
     <th></th>
@@ -15,8 +14,11 @@
   <tr>
     <td><%= puppy.name %></td>
     <td><%= puppy.breed %></td>
-    <td><%= puppy.age %></td>
-    <td><%= puppy.playtime %></td>
+    <% if puppy.playtime == true %>
+			<td>Yes</td>
+		<% else %>
+			<td>No</td>
+		<% end %>
     <td><%= link_to 'Show', puppy %></td>
     <td><%= link_to 'Edit', edit_puppy_path(puppy) %></td>
     <td><%= link_to 'Destroy', puppy, confirm: 'Are you sure?', method: :delete %></td>

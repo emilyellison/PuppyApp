@@ -14,10 +14,10 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.label :breed %>
-    <%= f.text_field :breed %>
-    <%= f.label :playtime %>
-    <%= f.check_box :playtime %>
-		<br/>
+    <%= f.text_field :breed %><br/><br/>
+    <%= f.label :playtime, :class => 'btn', :id => 'label_puppy_playtime' %>
+    <%= f.check_box :playtime, :style => 'visibility: hidden' %>
+		<br/><br/>
     <%= f.submit 'Submit', :class => 'btn btn-primary' %> 
 
 <% end %>
