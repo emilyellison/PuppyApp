@@ -9,7 +9,7 @@ link:http://twitter.github.com/bootstrap/.
 
 Start by adding Bootstrap-Sass to your Gemfile:
 
-	gem 'bootstrap-sass', '~> 2.0.2'
+  gem 'bootstrap-sass', '~> 2.0.2'
 
 Bootstrap-Sass is a Sass-friendly version of Twitter Bootstrap. Great
 if you want to add mix-in's and custom variables. To read more about
@@ -17,6 +17,13 @@ Bootstrap-Sass, visit:
 link:https://github.com/thomas-mcdonald/bootstrap-sass
 
 Don't forget to bundle install!
+
+Create a new stylesheet in app/assets/stylesheets called 'custom.css.scss'. 
+(You can name it anything you want.)
+
+Add in one line:
+
+  @import 'bootstrap';
 
 == Debugging Rails
 
